@@ -13,7 +13,6 @@ class Sorter():
         self.__location = lambda x: os.path.join(self.__FILE_FOLDER, str(x) + '.log')
         self.__re_pattern = r'(([0-9])|([0-2][0-9])|([3][0-1]))\/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\/\d{4}'
 
-
     def __file_read(self):
         if self.__COMMON_LOG_ADR:
             with open(self.__COMMON_LOG_ADR, 'r') as file_strings:
@@ -34,16 +33,10 @@ class Sorter():
                 date = date.replace('/', '-')
                 self.__file_write(date, data_line)
 
-
-
     def sorted(self):
         if not os.path.isdir(self.__FILE_FOLDER):
             os.mkdir(self.__FILE_FOLDER)
         self.__file_sorter()
-
-
-
-
 
 
 if __name__ == '__main__':
