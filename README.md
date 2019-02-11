@@ -1,7 +1,8 @@
 
 # sorter
-
-
+#logs
+#python
+#file create
 
 Simple log sorted script writen in Python3.
 
